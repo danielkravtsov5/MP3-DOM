@@ -16,16 +16,13 @@
  }
 
  function playSong(songId) {
-    const selectedSong = document.getElementById(songId);
-    const classes = []
-    classes.push(["selected"])
-
-    const songs = document.getElementsByClassName("song");
-    for (let song of songs) {
-        song.classList.remove(classes)
+    let songElmArr = document.getElementsByClassName('songElement');
+    for (let songEl of songElmArr){
+        songEl.classList.remove('songElement');
     }
-    selectedSong.classList.add(classes);
-}
+    const playingSong = document.getElementById(songId);
+    playingSong.classList.add('songElement');
+ }
 
 /**
  * Creates a song DOM element based on a song object.
