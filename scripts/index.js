@@ -16,13 +16,9 @@
  }
 
  function playSong(songId) {
-    let songElmArr = document.getElementsByClassName('songElement');
-    for (let songEl of songElmArr){
-        songEl.classList.remove('songElement');
-    }
-    const playingSong = document.getElementById(songId);
-    playingSong.classList.add('songElement');
- }
+    const chosenSong = document.getElementById(songId)
+    chosenSong.classList.add("chosenSong");
+}
 
 /**
  * Creates a song DOM element based on a song object.
@@ -31,7 +27,7 @@ function createSongElement({ id, title, album, artist, duration, coverArt }) {
     const coverImg = createElement('img', [],["songPhoto"],{src: coverArt});
     const children = [coverImg, "Song Name:"+ title + " ,","Album:"+ album+ " ,","Artist:"+ artist+ " ,","Duration:" +timeConvert(duration)+ " "]
     const classes = ['songElement']
-    const attrs = { onclick: `playSong(${id})` }
+    const attrs = { onclick: `playSong(${id})`, id: id}
 
     return createElement("div", children, classes, attrs)
 }
