@@ -18,6 +18,7 @@
  function playSong(songId) {
     const chosenSong = document.getElementById(songId)
     chosenSong.classList.add("chosenSong");
+    
 }
 
 /**
