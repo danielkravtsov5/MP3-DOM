@@ -28,14 +28,13 @@ Each song list item shall display the following details:
 -   `album` name
 -   `artist` name
 -   an image with the album's cover art (`coverArt`)
--   song `duration` (in `mm:ss` format, of course)
+-  ********* song `duration` (in `mm:ss` format, of course)****************
 
 One song can be played at a time. There should be some indication of the currently playing song (the specific indication is up to you). Clicking on a song will change the indication of the currently playing song. We have already provided code that handles the click event for you.
 
 ### Playlists
 
 Every playlist list item should display the following information:
-
 -   playlist `name`
 -   the number of songs in the playlist
 -   the total duration of the playlist
